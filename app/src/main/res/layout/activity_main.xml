@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".MainActivity"
+              android:id="@+id/name"
+              android:orientation="horizontal">
+
+    <SurfaceView
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:id="@+id/surfaceView"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo_button"
+            android:id="@+id/photo_button"
+            android:onClick="takePicture"
+            android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/surfaceView" android:layout_toRightOf="@+id/surfaceView"
+            android:layout_toEndOf="@+id/surfaceView"/>
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_list" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/surfaceView" android:layout_toEndOf="@+id/surfaceView"
+            android:layout_above="@+id/photo_button"/>
+
+</RelativeLayout>
